@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "🔨  Build & Install Debug APK",
+        "type": "shell",
+        "command": "./gradlew :app:installDebug",
+        "group": "build"
+      },
+      {
+        "label": "🚀  Launch App on Device",
+        "type": "shell",
+        "command": "adb shell am start -n com.abin.ai_toolbox/.MainActivity",
+        "dependsOn": "🔨  Build & Install Debug APK",
+        "group": "test"
+      }
+    ]
+  }
+  
